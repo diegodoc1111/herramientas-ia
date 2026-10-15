@@ -1,0 +1,40 @@
+MI LISTA DE HERRAMIENTAS DE IA
+La mala, la buena y la excelente para cada tarea.
+Diego Osorio (@soydiegoosorio). Revisada en octubre de 2026.
+
+1. PARA ESCRIBIR
+Mala: Meta AI · meta.ai
+Buena: ChatGPT · chatgpt.com
+Excelente: Claude · claude.ai
+
+2. PARA INVESTIGAR
+Mala: ChatGPT
+Buena: Gemini Notebook (antes NotebookLM) · notebook.google.com
+Excelente: Perplexity · perplexity.ai
+
+3. PARA CREAR PÁGINAS WEB
+Mala: Wix, su creador con IA (antes Wix ADI) · wix.com/ai-website-builder
+Buena: Lovable · lovable.dev
+Excelente: Claude Code · claude.com/product/claude-code
+
+4. PARA CREAR CONTENIDO
+Mala: ChatGPT
+Buena: Canva · canva.com
+Excelente: Claude + skills · claude.ai/customize/skills
+
+5. PARA PROGRAMAR
+Mala: ChatGPT
+Buena: Cursor · cursor.com
+Excelente: Claude Code
+
+6. PARA VENDER MÁS
+Mala: ChatGPT
+Buena: ManyChat · manychat.com
+Excelente: Claude con los agentes IMPERIO
+Escríbeme "IMPERIO" por Instagram: ig.me/m/soydiegoosorio
+
+LA REGLA PARA ELEGIR EN 10 SEGUNDOS
+La mala te da ideas. La buena te ayuda a hacerlo.
+La excelente te entrega el trabajo hecho.
+
+Guía completa: diegodoc1111.github.io/herramientas-ia

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi lista de herramientas de IA: la mala, la buena y la excelente para cada tarea</title>
+<meta name="description" content="Para escribir, investigar, crear páginas web, crear contenido, programar y vender más: cuál no usar, cuál está bien y cuál te entrega el trabajo hecho. Con el porqué y el link oficial. Gratis, en español.">
+<meta property="og:title" content="Mi lista de herramientas de IA: la mala, la buena y la excelente">
+<meta property="og:description" content="Para escribir, investigar, crear páginas, contenido, programar y vender más. Cuál no usar, cuál está bien y cuál te entrega el trabajo hecho. Gratis, en español.">
+<meta property="og:image" content="https://diegodoc1111.github.io/herramientas-ia/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://diegodoc1111.github.io/herramientas-ia/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mi lista de herramientas de IA: la mala, la buena y la excelente">
+<meta name="twitter:description" content="Para escribir, investigar, crear páginas, contenido, programar y vender más. Gratis, en español.">
+<meta name="twitter:image" content="https://diegodoc1111.github.io/herramientas-ia/img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #EEE8DB; --tinta: #1F1D1A; --texto: #3A3733; --suave: #6E6A63;
+    --terra: #D9774F; --terra-osc: #B85C37; --rosa: #F6DED5; --carta: #FBF8F2; --linea: #E0D8C8; --term: #1E1C1A;
+    --rojo: #C9372C; --rojo-f: #FBE1DD; --amar: #D9A21B; --amar-t: #8A6400; --amar-f: #FBF0C9; --verde: #2E9E5B; --verde-t: #1C7440; --verde-f: #DAF1E2;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 var(--sans); }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 22px 64px; }
+  .cabeza { display: flex; align-items: flex-end; gap: 18px; margin: 8px 0 18px; }
+  .cabeza img { width: 92px; height: auto; image-rendering: pixelated; flex: none; }
+  .etiqueta { display: inline-block; font: 600 13px/1 var(--mono); letter-spacing: .08em; color: var(--terra-osc); background: var(--rosa); padding: 8px 12px; border-radius: 999px; }
+  h1 { font: 400 clamp(40px, 8.5vw, 62px)/1.02 var(--serif); color: var(--tinta); margin: 14px 0 14px; letter-spacing: -.01em; }
+  h1 em, h2 em { color: var(--terra); }
+  .bajada { font-size: 19px; margin: 0 0 22px; } .bajada strong { color: var(--tinta); }
+  .resumen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 10px; }
+  .tarea { position: relative; display: block; background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 10px 12px; text-align: center; text-decoration: none; color: var(--texto); }
+  .tarea .n { position: absolute; top: 8px; left: 10px; font: 600 12px/1 var(--mono); color: var(--terra-osc); }
+  .tarea .e { display: block; font-size: 28px; line-height: 1.1; }
+  .tarea b { display: block; font: 400 18px/1.1 var(--serif); color: var(--tinta); margin: 6px 0 6px; }
+  .tarea small { display: inline-block; font: 600 12px/1.3 var(--sans); color: var(--verde-t); background: var(--verde-f); border-radius: 999px; padding: 4px 9px; }
+  @media (max-width: 600px) { .resumen { grid-template-columns: repeat(2, 1fr); } }
+  .cadena { display: flex; align-items: center; gap: 10px; background: var(--tinta); color: #E8E2D6; border-radius: 14px; padding: 12px 16px; margin: 0 0 26px; font-size: 15px; }
+  .cadena b { color: #fff; } .cadena span { font-size: 22px; }
+  .avisos { display: grid; gap: 10px; margin: 0 0 34px; padding: 0; list-style: none; }
+  .avisos li { background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 12px 16px; font-size: 15.5px; }
+  .avisos li b { color: var(--tinta); }
+  .paso { position: relative; margin: 0 0 30px; padding: 22px 20px 20px; background: var(--carta); border: 1px solid var(--linea); border-radius: 20px; scroll-margin-top: 24px; }
+  .num { position: absolute; top: -16px; left: 18px; width: 36px; height: 36px; border-radius: 50%; background: var(--terra); color: #fff; font: 700 17px/36px var(--sans); text-align: center; box-shadow: 0 2px 0 var(--terra-osc); }
+  h2 { font: 400 30px/1.15 var(--serif); color: var(--tinta); margin: 8px 0 10px; }
+  h3 { font: 700 16px/1.3 var(--sans); color: var(--tinta); margin: 18px 0 6px; }
+  .paso p { margin: 0 0 12px; } .paso p:last-child { margin-bottom: 0; }
+  .paso ol, .paso ul { margin: 0 0 12px; padding-left: 22px; } .paso li { margin: 5px 0; }
+  a { color: var(--terra-osc); text-underline-offset: 3px; }
+  .trio { display: grid; gap: 10px; margin: 6px 0 0; }
+  .herr { background: #fff; border: 1px solid var(--linea); border-left: 5px solid var(--linea); border-radius: 14px; padding: 12px 14px 13px; }
+  .herr.mala { border-left-color: var(--rojo); } .herr.buena { border-left-color: var(--amar); }
+  .herr.top { border: 2px solid var(--verde); border-left-width: 5px; background: #F7FCF8; }
+  .herr .cab { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 4px; }
+  .sello { flex: none; font: 700 11.5px/1 var(--mono); letter-spacing: .08em; padding: 6px 9px; border-radius: 999px; }
+  .mala .sello { background: var(--rojo-f); color: var(--rojo); }
+  .buena .sello { background: var(--amar-f); color: var(--amar-t); }
+  .top .sello { background: var(--verde-f); color: var(--verde-t); }
+  .nom { font: 400 23px/1.15 var(--serif); color: var(--tinta); text-decoration: none; }
+  a.nom::after { content: " ↗"; font: 600 13px var(--sans); color: var(--suave); }
+  a.nom.int::after { content: none; }
+  .nom small { font: 400 14px var(--sans); color: var(--suave); white-space: nowrap; }
+  .herr p { margin: 4px 0 0; font-size: 15.5px; line-height: 1.55; }
+  .herr p.idea { font-size: 14.5px; color: var(--suave); }
+  .herr .empieza { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #A9D9B9; font-size: 15px; }
+  .herr .empieza b { color: var(--verde-t); }
+  .boton { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 14px 0 12px; padding: 16px 20px; border-radius: 999px; background: var(--terra); color: #fff; text-decoration: none; font: 700 18px/1.2 var(--sans); box-shadow: 0 3px 0 var(--terra-osc); border: 0; width: 100%; cursor: pointer; text-align: center; }
+  .boton:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--terra-osc); }
+  .boton.sec { background: #fff; color: var(--tinta); border: 1px solid var(--linea); box-shadow: 0 3px 0 var(--linea); }
+  .nota { font-size: 14.5px; color: var(--suave); }
+  .term { background: var(--term); border-radius: 14px; overflow: hidden; margin: 12px 0 0; box-shadow: 0 6px 20px rgba(30,20,15,.22); }
+  .term .barra { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: #2A2724; font: 12.5px var(--mono); color: #9E978C; }
+  .term .barra i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; } .term .barra span { margin-left: 8px; }
+  .term pre { margin: 0; padding: 14px 16px 16px; overflow-x: auto; font: 14px/1.7 var(--mono); color: #E8E2D6; white-space: pre-wrap; word-break: break-word; }
+  .term.largo pre { max-height: 420px; overflow-y: auto; }
+  .term .p { color: var(--terra); } .term .ag { color: var(--terra); font-weight: 600; }
+  .ruta { font-weight: 700; color: var(--tinta); } .ruta .f { color: var(--terra); font-weight: 400; padding: 0 2px; }
+  .copiar { margin-top: 10px; display: inline-flex; gap: 8px; align-items: center; cursor: pointer; border: 1px solid var(--linea); background: #fff; color: var(--tinta); border-radius: 999px; padding: 8px 14px; font: 600 14px var(--sans); }
+  .acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
+  .acciones a { font: 600 14px var(--sans); }
+  .rondas { display: grid; gap: 10px; margin: 12px 0 0; }
+  .ronda { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--linea); border-radius: 14px; padding: 12px 14px; }
+  .ronda .sello { margin-top: 3px; min-width: 96px; text-align: center; }
+  .ronda b { color: var(--tinta); }
+  .seccion { margin: 44px 0 0; } .seccion h2 { font-size: 32px; }
+  .seccion ul { padding-left: 22px; } .seccion li { margin: 6px 0; }
+  details { background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 700; color: var(--tinta); } details p { margin: 10px 0 0; }
+  details .term { margin-bottom: 4px; }
+  code { font: 14px var(--mono); background: #fff; border: 1px solid var(--linea); border-radius: 6px; padding: 1px 6px; }
+  .loop { display: block; background: var(--rosa); border: 1px solid #EBC3B3; border-left: 6px solid var(--terra); border-radius: 14px;
+          padding: 14px 16px; margin: 0 0 30px; font-size: 16px; color: var(--tinta); text-decoration: none; }
+  .loop b { color: var(--terra-osc); } .loop span { display: block; margin-top: 6px; font-weight: 700; color: var(--terra-osc); }
+  .puente { display: block; margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--rosa); color: var(--tinta); font-size: 15px; text-decoration: none; }
+  .puente b { color: var(--terra-osc); }
+  .imperio { margin: 48px 0 0; padding: 26px 22px 24px; border-radius: 22px; background: var(--tinta); color: #E8E2D6; scroll-margin-top: 24px; }
+  .imperio h2 { color: #fff; font-size: 34px; margin-top: 0; } .imperio h2 em { color: var(--terra); }
+  .imperio p { margin: 0 0 14px; } .imperio b { color: #fff; }
+  .imperio ul { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+  .imperio li { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 10px 14px; }
+  .imperio .cifra { font: 400 26px/1.25 var(--serif); color: #fff; margin: 6px 0 16px; }
+  .imperio .cifra em { color: var(--terra); }
+  .imperio .boton { margin-bottom: 8px; } .imperio .nota { color: #B9B2A6; }
+  footer { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--linea); font-size: 15px; color: var(--suave); }
+  footer a { color: var(--tinta); font-weight: 700; text-decoration: none; } footer em { font-family: var(--serif); font-size: 19px; color: var(--terra); }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="cabeza">
+    <img src="img/mascota-regalo.png" alt="">
+    <span class="etiqueta">GRATIS · EN ESPAÑOL</span>
+  </div>
+
+  <h1>Mi lista de <em>herramientas de IA</em>: la mala, la buena y la excelente</h1>
+  <p class="bajada">Es la lista completa del video. Para cada tarea te digo <strong>cuál no usar, cuál está bien y cuál te entrega el trabajo hecho</strong>, con el porqué y el link oficial. Revisada en octubre de 2026.</p>
+
+  <div class="resumen" aria-label="Las 6 tareas y la herramienta excelente de cada una">
+    <a class="tarea" href="#escribir"><span class="n">1</span><span class="e">✍️</span><b>Para escribir</b><small>★ Claude</small></a>
+    <a class="tarea" href="#investigar"><span class="n">2</span><span class="e">🔎</span><b>Para investigar</b><small>★ Perplexity</small></a>
+    <a class="tarea" href="#paginas"><span class="n">3</span><span class="e">🖥️</span><b>Para crear páginas web</b><small>★ Claude Code</small></a>
+    <a class="tarea" href="#contenido"><span class="n">4</span><span class="e">🎨</span><b>Para crear contenido</b><small>★ Claude + skills</small></a>
+    <a class="tarea" href="#programar"><span class="n">5</span><span class="e">💻</span><b>Para programar</b><small>★ Claude Code</small></a>
+    <a class="tarea" href="#vender"><span class="n">6</span><span class="e">💰</span><b>Para vender más</b><small>★ Agentes IMPERIO</small></a>
+  </div>
+  <div class="cadena"><span>⚡</span><div><b>La regla:</b> la mala te da ideas, la buena te ayuda a hacerlo y la excelente te entrega el trabajo hecho.</div></div>
+
+  <a class="loop" href="#imperio">🚀 <b>Deja de hacerlo todo a mano y haz en 3 días el trabajo de todo un mes.</b> Ten un equipo de marketing de 4 personas trabajando para ti por unos $25 al mes: los agentes Imperio.<span>Al final te cuento qué hacen ↓</span></a>
+
+  <ul class="avisos">
+    <li>🚦 <b>“Mala” no quiere decir que la herramienta sea mala.</b> Quiere decir que para esa tarea hay algo que te ahorra más horas. Es mi opinión, por lo que me ha funcionado con mi equipo y con los negocios con los que trabajo.</li>
+    <li>💸 <b>Casi todas tienen plan gratis para que las pruebes.</b> Te dejo el detalle en las preguntas frecuentes.</li>
+    <li>📌 <b>Guárdala:</b> al final puedes copiar la lista o descargarla como archivo de texto.</li>
+  </ul>
+
+  <section class="paso" id="escribir">
+    <div class="num">1</div>
+    <h2>Para <em>escribir</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://www.meta.ai/" target="_blank" rel="noopener">Meta AI</a></div>
+        <p>La tienes a la mano dentro de WhatsApp, Instagram y Facebook, y para algo rápido sirve. Para escribir textos que venden, no es la mejor: se queda corta.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></div>
+        <p>Escribe rápido y sirve para casi todo. El problema: para que no suene a robot, te toca corregirlo bastante.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom" href="https://claude.ai/" target="_blank" rel="noopener">Claude</a></div>
+        <p>Para mí es la que mejor escribe en español: suena a persona, no a máquina. Ahí escribo mis guiones, anuncios y correos.</p>
+        <p class="empieza"><b>Cómo empezar:</b> entra a claude.ai, crea tu cuenta gratis y pídele el texto como se lo pedirías a un copywriter: para quién es, qué vendes y qué quieres que haga la persona que lo lea.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paso" id="investigar">
+    <div class="num">2</div>
+    <h2>Para <em>investigar</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></div>
+        <p>Para investigar no es la mejor: sirve para todo, y para investigar a fondo hay herramientas hechas solo para eso.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://notebook.google.com/" target="_blank" rel="noopener">Gemini Notebook <small>(antes NotebookLM)</small></a></div>
+        <p>Le subes tus documentos y te responde con lo que dicen. Te los convierte en resúmenes en audio, mapas mentales y presentaciones. Para estudiar lo que ya tienes es buenísima; para buscar algo nuevo en internet, me quedo con la siguiente.</p>
+        <p class="idea">💡 Es como un asistente que se leyó todos tus documentos y te responde solo con lo que dicen.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a></div>
+        <p>Busca en internet y cada respuesta trae sus fuentes con link, para que revises de dónde sale cada dato antes de usarlo.</p>
+        <p class="idea">💡 Es como Google, pero en vez de darte 10 links te da la respuesta, con sus fuentes.</p>
+        <p class="empieza"><b>Cómo empezar:</b> entra a perplexity.ai y pregúntale como le preguntarías a un experto. Por ejemplo: “¿Qué tipo de anuncios están funcionando este año para clínicas estéticas?”.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paso" id="paginas">
+    <div class="num">3</div>
+    <h2>Para crear <em>páginas web</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://www.wix.com/ai-website-builder" target="_blank" rel="noopener">Wix <small>(su creador con IA)</small></a></div>
+        <p>Para una página sencilla sirve, y la puedes arrancar gratis. Para una página de ventas hecha a tu medida, no es la mejor opción.</p>
+        <p class="idea">El que salía en el video como Wix ADI: Wix lo reemplazó por su creador de páginas con IA.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://lovable.dev/" target="_blank" rel="noopener">Lovable</a></div>
+        <p>Le describes en palabras normales la página o la app que quieres y te la arma. Muy buena para arrancar sin saber programar.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a></div>
+        <p>Le pides tu página como se la pedirías a un diseñador y te la arma, la cambia las veces que quieras y te la deja lista para publicar. Así hago las páginas de los negocios con los que trabajo.</p>
+        <p class="idea">💡 Es como tener un programador sentado en tu computador: le dices en español qué quieres y él lo construye.</p>
+        <p class="empieza"><b>Cómo empezar:</b> se instala desde el computador (Windows o Mac) y viene en el plan Pro de Claude. La forma más fácil es la app de escritorio, que ya trae Claude Code.</p>
+      </div>
+    </div>
+    <a class="boton" href="https://claude.ai/download" target="_blank" rel="noopener">⬇ Descargar Claude para el computador</a>
+    <p class="ruta">App de Claude <span class="f">→</span> pestaña Code <span class="f">→</span> elige tu carpeta</p>
+    <ol>
+      <li>Instala la app y entra con tu cuenta de Claude (plan Pro).</li>
+      <li>Dentro de la app, entra a la pestaña <b>Code</b> y elige una carpeta para tu página (por ejemplo <code>Documentos\Mi página</code>).</li>
+      <li>Pégale este mensaje y responde sus preguntas:</li>
+    </ol>
+    <div class="term">
+      <div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>Claude Code</span></div>
+      <pre id="pagina"><span class="p">❯</span> Créame una página de ventas para mi negocio. Antes de empezar, hazme las preguntas que necesites sobre qué vendo, a quién, a qué precio y por qué me compran a mí. Explícame todo sin tecnicismos y muéstrame cómo va quedando.</pre>
+    </div>
+    <button class="copiar" type="button" data-copiar-de="pagina">📋 Copiar el mensaje</button>
+    <details>
+      <summary>¿Prefieres la terminal? (opcional)</summary>
+      <p>La terminal es la ventanita donde le escribes órdenes al computador. En <b>Windows</b> abre PowerShell y pega:</p>
+      <div class="term"><div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>PowerShell</span></div><pre id="win">irm https://claude.ai/install.ps1 | iex</pre></div>
+      <button class="copiar" type="button" data-copiar-de="win">📋 Copiar</button>
+      <p>En <b>Mac</b> abre Terminal y pega:</p>
+      <div class="term"><div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>Terminal</span></div><pre id="mac">curl -fsSL https://claude.ai/install.sh | bash</pre></div>
+      <button class="copiar" type="button" data-copiar-de="mac">📋 Copiar</button>
+      <p>Cierra y vuelve a abrir la terminal, entra a tu carpeta y escribe <code>claude</code>. La primera vez te pide iniciar sesión en el navegador.</p>
+    </details>
+    <a class="puente" href="#imperio">🔧 <b>¿La parte técnica te traba?</b> Te lo dejamos conectado y funcionando: mira los agentes Imperio ↓</a>
+  </section>
+
+  <section class="paso" id="contenido">
+    <div class="num">4</div>
+    <h2>Para crear <em>contenido</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></div>
+        <p>Para contenido no es la mejor: si no le enseñas tu voz, tus posts terminan sonando igual a los de todo el mundo.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></div>
+        <p>Para diseñar tus posts, carruseles e historias con plantillas es muy buena. Pero el diseño solo no vende: la idea y el texto los pones tú.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom" href="https://support.claude.com/es/articles/12512176-que-son-las-habilidades" target="_blank" rel="noopener">Claude + skills</a></div>
+        <p>Le enseñas una vez cómo haces tu contenido y lo repite cada vez, con tu voz. Así saco mis guiones, carruseles y anuncios.</p>
+        <p class="idea">💡 Una skill es como una receta que le dejas a Claude: se la explicas una vez y la sigue cada vez que la necesita.</p>
+        <p class="empieza"><b>Cómo empezar:</b> en claude.ai entra a <b>Configuración → Capacidades</b> y enciende «Ejecución de código y creación de archivos». Después abre un chat nuevo y dile: «Quiero crear una skill para hacer mis carruseles como yo los hago». Responde sus preguntas, guarda la skill que te arma y actívala en <b>Personalizar → Habilidades</b> (en inglés: Customize → Skills). Las skills vienen en todos los planes, incluso el gratis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paso" id="programar">
+    <div class="num">5</div>
+    <h2>Para <em>programar</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></div>
+        <p>Para programar no es la mejor: en el chat te da pedazos de código y te toca copiarlos, pegarlos y arreglarlos tú.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a></div>
+        <p>Es un editor de código con IA adentro, para Windows, Mac y Linux. Muy bueno si ya sabes algo de programación.</p>
+        <p class="idea">💡 Un editor de código es como un Word, pero para escribir programas.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a></div>
+        <p>Lee tu proyecto completo, escribe el código, lo prueba y corrige lo que falla. Tú le hablas en español, como a un programador de tu equipo.</p>
+        <p class="empieza"><b>Cómo empezar:</b> igual que en la tarea 3. <a href="#paginas">Ver cómo instalarlo ↑</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paso" id="vender">
+    <div class="num">6</div>
+    <h2>Para <em>vender más</em></h2>
+    <div class="trio">
+      <div class="herr mala">
+        <div class="cab"><span class="sello">✕ MALA</span><a class="nom" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></div>
+        <p>Te da ideas para vender, pero las ideas no venden solas: alguien tiene que ejecutarlas.</p>
+      </div>
+      <div class="herr buena">
+        <div class="cab"><span class="sello">BUENA</span><a class="nom" href="https://manychat.com/" target="_blank" rel="noopener">ManyChat</a></div>
+        <p>Es la que te mandó este link: contesta sola cuando alguien comenta una palabra en tus publicaciones. Muy buena para que ningún interesado se quede sin respuesta.</p>
+      </div>
+      <div class="herr top">
+        <div class="cab"><span class="sello">★ EXCELENTE</span><a class="nom int" href="#imperio">Claude con los agentes IMPERIO</a></div>
+        <p>Un equipo de marketing que trabaja para ti: te hace el contenido, los anuncios, las páginas, las campañas en Meta y hasta responde tus mensajes.</p>
+        <p class="empieza"><b>Cómo empezar:</b> <a href="#imperio">mira cómo funcionan aquí abajo ↓</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <h2>Cómo elegir <em>en 10 segundos</em></h2>
+    <p>Hazte una sola pregunta: <b>al final, ¿quién hace el trabajo?</b></p>
+    <div class="rondas">
+      <div class="ronda mala"><span class="sello">✕ MALA</span><div><b>Te da ideas</b> y el trabajo lo terminas haciendo tú.</div></div>
+      <div class="ronda buena"><span class="sello">BUENA</span><div><b>Te ayuda a hacerlo</b>, pero tú sigues ahí encima.</div></div>
+      <div class="ronda top"><span class="sello">★ EXCELENTE</span><div><b>Te entrega el trabajo hecho</b> y tú solo revisas y apruebas.</div></div>
+    </div>
+    <p class="nota" style="margin-top:14px">¿No sabes por dónde empezar? Escoge la tarea que más horas te roba esta semana y prueba la excelente de esa fila.</p>
+  </section>
+
+  <section class="seccion">
+    <h2>Llévate <em>la lista</em></h2>
+    <div class="term largo">
+      <div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>lista · herramientas de IA</span></div>
+<pre id="lista">MI LISTA DE HERRAMIENTAS DE IA
+La mala, la buena y la excelente para cada tarea.
+Diego Osorio (@soydiegoosorio). Revisada en octubre de 2026.
+
+<span class="ag">1. PARA ESCRIBIR</span>
+Mala: Meta AI · meta.ai
+Buena: ChatGPT · chatgpt.com
+Excelente: Claude · claude.ai
+
+<span class="ag">2. PARA INVESTIGAR</span>
+Mala: ChatGPT
+Buena: Gemini Notebook (antes NotebookLM) · notebook.google.com
+Excelente: Perplexity · perplexity.ai
+
+<span class="ag">3. PARA CREAR PÁGINAS WEB</span>
+Mala: Wix, su creador con IA (antes Wix ADI) · wix.com/ai-website-builder
+Buena: Lovable · lovable.dev
+Excelente: Claude Code · claude.com/product/claude-code
+
+<span class="ag">4. PARA CREAR CONTENIDO</span>
+Mala: ChatGPT
+Buena: Canva · canva.com
+Excelente: Claude + skills · claude.ai/customize/skills
+
+<span class="ag">5. PARA PROGRAMAR</span>
+Mala: ChatGPT
+Buena: Cursor · cursor.com
+Excelente: Claude Code
+
+<span class="ag">6. PARA VENDER MÁS</span>
+Mala: ChatGPT
+Buena: ManyChat · manychat.com
+Excelente: Claude con los agentes IMPERIO
+Escríbeme "IMPERIO" por Instagram: ig.me/m/soydiegoosorio
+
+<span class="ag">LA REGLA PARA ELEGIR EN 10 SEGUNDOS</span>
+La mala te da ideas. La buena te ayuda a hacerlo.
+La excelente te entrega el trabajo hecho.
+
+Guía completa: diegodoc1111.github.io/herramientas-ia</pre>
+    </div>
+    <button class="boton" type="button" data-copiar-de="lista">📋 Copiar la lista</button>
+    <div class="acciones"><a href="lista-herramientas-ia.txt" download="lista-herramientas-ia.txt">⬇ Descargarla como archivo de texto</a></div>
+    <p class="nota" style="margin-top:12px">¿Estás en el celular y no te deja copiar? Abre esta página en tu navegador (Safari o Chrome) o descárgala como archivo de texto.</p>
+  </section>
+
+  <section class="seccion">
+    <h2>Preguntas <em>frecuentes</em></h2>
+    <details>
+      <summary>¿Cuánto cuesta?</summary>
+      <p>Lo revisé en sus páginas de precios en octubre de 2026. <b>Tienen plan gratis para empezar:</b> ChatGPT, Claude, Perplexity, Gemini Notebook, Wix, Lovable, Canva, Cursor y ManyChat. Los planes gratis tienen límites de uso; si una te ahorra horas, ahí decides si pagas.</p>
+      <p>Las <b>skills de Claude</b> vienen en todos los planes, incluso el gratis. <b>Claude Code no viene en el plan gratis:</b> lo trae el plan Pro de Claude, que hoy cuesta 20 dólares al mes pagando mes a mes (más impuestos según tu país). Meta AI ya viene dentro de WhatsApp, Instagram y Facebook.</p>
+    </details>
+    <details>
+      <summary>¿Tengo que pagar todas?</summary>
+      <p>No. Empieza por la tarea que más tiempo te roba y prueba la excelente de esa fila. Cuando veas que te ahorra horas, decides si pagas.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasó con NotebookLM?</summary>
+      <p>Desde julio de 2026 se llama <b>Gemini Notebook</b>. Es la misma herramienta de Google, ahora con otro nombre.</p>
+    </details>
+    <details>
+      <summary>¿Y Wix ADI?</summary>
+      <p>Ya no existe con ese nombre. Desde noviembre de 2024 Wix lo reemplazó por su creador de páginas con IA, que es el que te enlazo arriba.</p>
+    </details>
+    <details>
+      <summary>¿Necesito saber programar para usar Claude Code?</summary>
+      <p>No. Le hablas en español y él escribe el código. Si algo te sale con términos raros o en inglés, pídele que te lo explique en sencillo.</p>
+    </details>
+    <details>
+      <summary>¿Por qué Claude sale tanto en la lista?</summary>
+      <p>Porque es la que uso todos los días con mi equipo y con los negocios con los que trabajo. Para escribir, crear contenido, hacer páginas y vender, es la que más horas me ahorra.</p>
+    </details>
+  </section>
+
+  <section class="imperio" id="imperio">
+    <h2>Deja de hacerlo todo <em>a mano</em></h2>
+    <p class="cifra">Haz en <em>3 días</em> el trabajo de todo un mes.</p>
+    <p>Ten un equipo de marketing de 4 personas trabajando para ti por unos <b>$25 al mes</b>: <b>los agentes Imperio</b>. Te hacen:</p>
+    <ul>
+      <li>✍️ El contenido y los carruseles.</li>
+      <li>📣 Los anuncios y los VSL.</li>
+      <li>🖥️ Las páginas web.</li>
+      <li>📊 Las campañas en Meta.</li>
+      <li>💬 Y hasta responden tus mensajes.</li>
+    </ul>
+    <p><b>Sin saber de tecnología: solo copias, pegas y facturas.</b></p>
+    <p>Son los mismos agentes que hoy les suman <b>entre $5.000 y $10.000 dólares extra al mes</b> a los negocios con los que trabajo.</p>
+    <a class="boton" href="https://ig.me/m/soydiegoosorio" target="_blank" rel="noopener">Escríbeme “IMPERIO” por Instagram →</a>
+    <p class="nota">Si la parte técnica te traba, te lo dejamos conectado y funcionando. Te cuento cómo funciona y si encaja con tu negocio.</p>
+  </section>
+
+  <footer>
+    <p>Lista de <a href="https://instagram.com/soydiegoosorio">@soydiegoosorio</a>, revisada en octubre de 2026. Los nombres y planes de estas herramientas cambian seguido: si algo cambió, avísame por Instagram. La lista también está en <a href="https://github.com/diegodoc1111/herramientas-ia">GitHub</a>.</p>
+    <p><em>Guárdala, úsala y compártela.</em></p>
+  </footer>
+
+</main>
+<script>
+  function copiarTexto(t, boton) {
+    var listo = function () { var o = boton.textContent; boton.textContent = "✅ Copiado"; setTimeout(function () { boton.textContent = o; }, 1800); };
+    var respaldo = function () {
+      var a = document.createElement("textarea"); a.value = t; a.setAttribute("readonly", "");
+      a.style.position = "fixed"; a.style.top = "-1000px"; document.body.appendChild(a); a.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(a);
+      if (ok) { listo(); } else { boton.textContent = "Mantén presionado el texto para copiarlo"; }
+    };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(t).then(listo, respaldo); } else { respaldo(); }
+  }
+  document.querySelectorAll("[data-copiar-de]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = document.getElementById(b.getAttribute("data-copiar-de"));
+      var t = (el.innerText || el.textContent).replace(/^❯\s*/, "");
+      copiarTexto(t, b);
+    });
+  });
+</script>
+</body>
+</html>
